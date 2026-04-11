@@ -12,7 +12,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/Isarthak26/portfolio_depl.git',
-                    credentialsId: 'github_token'
+                    credentialsId: 'git_token'
             }
         }
 
