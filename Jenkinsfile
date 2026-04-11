@@ -42,7 +42,7 @@ pipeline {
         stage('Update Infra Repo') {
             steps {
                 withCredentials([string(
-                    credentialsId: 'github-token',
+                    credentialsId: 'git_token',
                     variable: 'TOKEN'
                 )]) {
                     sh '''
