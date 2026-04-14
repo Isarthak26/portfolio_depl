@@ -1,6 +1,6 @@
 cd portfolio-app
 
-# Replace with the corrected version
+# Replace the entire Dockerfile with the correct content
 cat > Dockerfile << 'EOF'
 # Stage 1: Build
 FROM node:20-alpine AS builder
