@@ -49,7 +49,7 @@ pipeline {
                         rm -rf portfolio_infra
                         git clone https://$TOKEN@github.com/Isarthak26/portfolio_infra.git
                         cd portfolio_infra
-                        sed -i "s|image: portfolioacr112.azurecr.io/portfolio:.*|image: portfolioacr112.azurecr.io/portfolio:${BUILD_NUMBER}|" k8s/deployment.yaml
+                        sed -i "s|          image: portfolioacr112.azurecr.io/portfolio:.*|          image: portfolioacr112.azurecr.io/portfolio:${BUILD_NUMBER}|" k8s/deployment.yaml
                         git config user.email "jenkins@ci.com"
                         git config user.name "Jenkins"
                         git add .
