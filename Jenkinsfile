@@ -12,7 +12,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/Isarthak26/portfolio_depl.git',
-                    credentialsId: 'github-token'
+                    credentialsId: 'git_token'
             }
         }
 
@@ -42,7 +42,7 @@ pipeline {
         stage('Update Infra Repo') {
             steps {
                 withCredentials([string(
-                    credentialsId: 'github-token',
+                    credentialsId: 'git_token',
                     variable: 'TOKEN'
                 )]) {
                     sh '''
