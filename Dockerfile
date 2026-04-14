@@ -37,4 +37,4 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
 
 # Start server on port 3000
 CMD ["serve", "-s", "dist", "-l", "3000"]
-EOF
+
