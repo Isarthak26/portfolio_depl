@@ -481,7 +481,7 @@ export default function App() {
                 <span className="text-[#6366F1]">amazing together.</span>
               </h2>
               <p className="text-gray-400 text-lg mb-12 max-w-md">
-                Have a project in mind? Or just want to say hi? Feel free to reach out. 
+                Have a project in brain? Or just want to say hi? Feel free to reach out. 
                 I'm always open to discussing new opportunities and challenges.
               </p>
               <div className="flex gap-6">
