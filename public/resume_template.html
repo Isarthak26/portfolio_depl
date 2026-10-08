@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarthak Bordia — Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 0.5in 0.6in;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      line-height: 1.35;
+      font-size: 11px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .resume-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 32px;
+      background: #ffffff;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    h1.name {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .contact-line {
+      font-size: 11px;
+      color: #475569;
+      margin-bottom: 4px;
+    }
+    .contact-line a {
+      color: #475569;
+      text-decoration: none;
+    }
+    .links-line {
+      font-size: 11px;
+      font-weight: 600;
+      color: #2563eb;
+    }
+    .links-line a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+    .divider {
+      border: 0;
+      border-top: 2px solid #1b365d;
+      margin: 8px 0 10px 0;
+    }
+    section {
+      margin-bottom: 11px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    h2.section-title {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #1b365d;
+      text-transform: uppercase;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    p.summary {
+      font-size: 10.5px;
+      color: #1e293b;
+      line-height: 1.4;
+      text-align: justify;
+    }
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .skill-row {
+      font-size: 10.5px;
+      line-height: 1.35;
+    }
+    .skill-label {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .skill-val {
+      color: #334155;
+    }
+    .project-item {
+      margin-bottom: 8px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .project-name {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .project-link {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #2563eb;
+      text-decoration: underline;
+      white-space: nowrap;
+    }
+    .project-tech {
+      font-size: 10px;
+      font-weight: 600;
+      color: #0284c7;
+      margin-top: 1px;
+      margin-bottom: 3px;
+    }
+    ul.bullets {
+      padding-left: 16px;
+      margin: 0;
+    }
+    ul.bullets li {
+      font-size: 10px;
+      color: #334155;
+      line-height: 1.35;
+      margin-bottom: 1.5px;
+    }
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 10.5px;
+      margin-bottom: 2px;
+    }
+    .edu-school {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-degree {
+      color: #334155;
+    }
+    .edu-dates {
+      font-size: 10px;
+      color: #64748b;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .cert-line {
+      font-size: 10px;
+      color: #334155;
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+    .cert-label {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+      .resume-container {
+        padding: 0;
+        max-width: 100%;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <header>
+      <h1 class="name">Sarthak Bordia</h1>
+      <div class="contact-line">
+        Greater Noida, UP &nbsp;|&nbsp; 
+        <a href="tel:+917610305451">+91 7610305451</a> &nbsp;|&nbsp; 
+        <a href="mailto:sarthakbordia10@gmail.com">sarthakbordia10@gmail.com</a>
+      </div>
+      <div class="links-line">
+        <a href="https://github.com/Isarthak26" target="_blank" rel="noopener noreferrer">GitHub</a> &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/sarthak-bordia-3b9b891a0/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;|&nbsp;
+        <a href="https://github.com/Isarthak26" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      </div>
+    </header>
+
+    <hr class="divider">
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary">
+        Computer Science undergraduate specializing in DevOps, with hands-on experience in cloud infrastructure, CI/CD pipelines, containerization, and automated deployments. Experienced with AWS, Azure, Docker, Kubernetes, Terraform, and Jenkins. Driven problem-solver focused on building scalable, reliable systems through practical engineering and infrastructure automation.
+      </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS & CORE COMPETENCIES -->
+    <section>
+      <h2 class="section-title">Technical Skills &amp; Core Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-label">Programming &amp; Core CS: </span>
+          <span class="skill-val">C++, Python, Data Structures &amp; Algorithms, REST APIs, Linux CLI, Bash</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Cloud &amp; Infrastructure: </span>
+          <span class="skill-val">AWS (EC2, S3, VPC, ALB, Route 53, ACM, RDS), Azure (AKS, ACR), Docker, Kubernetes, Terraform</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">DevOps &amp; Observability: </span>
+          <span class="skill-val">Jenkins, ArgoCD (GitOps), Nginx, Prometheus, Grafana, k6, Git</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Core Competencies: </span>
+          <span class="skill-val">Technical Communication, Workflow Automation, Infrastructure as Code, End-to-End System Design</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section>
+      <h2 class="section-title">Featured Projects</h2>
+
+      <!-- Project 1 -->
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">CloudOpt AI</span>
+          <a class="project-link" href="https://github.com/Isarthak26/CloudOpt" target="_blank" rel="noopener noreferrer">[View Project]</a>
+        </div>
+        <div class="project-tech">Python (FastAPI), Docker Compose, Prometheus, Grafana, k6</div>
+        <ul class="bullets">
+          <li>Architected a local-first cloud measurement platform isolating backend API workloads from telemetry collection pipelines.</li>
+          <li>Executed 9 validated k6 experiments across 3 CPU/memory tier configurations under varied load profiles, identifying CPU saturation as root cause of a 17–28x p95 latency surge.</li>
+          <li>Designed threshold-based recommendation scripts in Python to evaluate workload allocations against target SLA thresholds.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Azure GitOps CI/CD Pipeline</span>
+          <a class="project-link" href="https://github.com/Isarthak26/portfolio_infra" target="_blank" rel="noopener noreferrer">[View Project]</a>
+        </div>
+        <div class="project-tech">Terraform, Azure Container Registry (ACR), Azure Kubernetes Service (AKS), Jenkins, ArgoCD, Nginx</div>
+        <ul class="bullets">
+          <li>Automated cloud infrastructure provisioning on Azure Kubernetes Service (AKS) using modular Terraform configurations.</li>
+          <li>Integrated Jenkins build pipelines with Azure Container Registry (ACR) and ArgoCD GitOps continuous deployment to AKS.</li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Real-time Chat App on AKS</span>
+          <a class="project-link" href="https://github.com/Isarthak26/real_time_chat_APP" target="_blank" rel="noopener noreferrer">[View Project]</a>
+        </div>
+        <div class="project-tech">Docker, Kubernetes (AKS), Azure Container Registry, Jenkins, Prometheus, Grafana</div>
+        <ul class="bullets">
+          <li>Orchestrated containerized application services on Azure Kubernetes Service automated through Jenkins deployment pipelines.</li>
+          <li>Configured Prometheus metrics scrapers and Grafana monitoring dashboards for real-time cluster health and resource tracking.</li>
+        </ul>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Automated AWS Infrastructure Deployment</span>
+          <a class="project-link" href="https://github.com/Isarthak26/Docker_CICD" target="_blank" rel="noopener noreferrer">[View Project]</a>
+        </div>
+        <div class="project-tech">AWS (VPC, EC2, RDS, ALB, Route 53, ACM), Terraform, Jenkins, Python (Flask)</div>
+        <ul class="bullets">
+          <li>Provisioned secure AWS network topology deploying Python Flask services on EC2 alongside database resources within a custom VPC.</li>
+          <li>Configured Application Load Balancer routing, Route 53 DNS records, ACM SSL certificates, and automated Jenkins pipelines.</li>
+        </ul>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-name">Static Website Hosting on AWS</span>
+          <a class="project-link" href="https://github.com/Isarthak26" target="_blank" rel="noopener noreferrer">[View Project]</a>
+        </div>
+        <div class="project-tech">AWS S3, Route 53, ACM, Application Load Balancer, EC2</div>
+        <ul class="bullets">
+          <li>Hosted custom domain static assets on S3 integrated with Route 53 DNS routing and ACM SSL/TLS certificate management.</li>
+          <li>Configured Application Load Balancer path-based routing rules to direct incoming web traffic to target backend instances.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION, CERTIFICATIONS & LANGUAGES -->
+    <section>
+      <h2 class="section-title">Education, Certifications &amp; Languages</h2>
+      <div class="edu-header">
+        <div>
+          <span class="edu-school">Bennett University</span>
+          <span class="edu-degree"> — B.Tech in CSE (DevOps Specialization) — CGPA: 7.12</span>
+        </div>
+        <span class="edu-dates">08/2023 – 08/2027</span>
+      </div>
+      <div class="edu-header">
+        <div>
+          <span class="edu-school">Gurukul School</span>
+          <span class="edu-degree"> — Senior Secondary Education</span>
+        </div>
+        <span class="edu-dates">03/2011 – 03/2023</span>
+      </div>
+      <div class="cert-line">
+        <span class="cert-label">Industry Certifications: </span>
+        Peer-to-Peer Protocols &amp; LANs (Univ. of Colorado) | Operating Systems: Power User (Google) | Digital Electronics (Infosys) | Machine Learning Fundamentals (IBM)
+      </div>
+      <div class="cert-line">
+        <span class="cert-label">Languages: </span>
+        English (Professional), Hindi (Native)
+      </div>
+    </section>
+  </div>
+</body>
+</html>

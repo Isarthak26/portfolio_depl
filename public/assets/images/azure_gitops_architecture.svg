@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <!-- Gradients & Filters -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B11"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="azureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078D4"/>
+      <stop offset="100%" stop-color="#005A9E"/>
+    </linearGradient>
+    <linearGradient id="k8sGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#326CE5"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="argoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF7B45"/>
+      <stop offset="100%" stop-color="#D9531E"/>
+    </linearGradient>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#CBD5E1"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38BDF8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="480" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- ==================== AZURE OUTER CONTAINER ==================== -->
+  <rect x="360" y="40" width="810" height="400" rx="16" fill="#0D1322" stroke="#D97706" stroke-width="2" opacity="0.95"/>
+  <!-- Azure Header Badge -->
+  <g transform="translate(380, 56)">
+    <rect width="90" height="26" rx="6" fill="#0078D4"/>
+    <path d="M 12 19 L 17 6 L 22 19 Z M 14 16 L 20 16" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <text x="32" y="18" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" letter-spacing="1">AZURE</text>
+  </g>
+
+  <!-- ==================== AKS CLUSTER CONTAINER ==================== -->
+  <rect x="730" y="90" width="415" height="280" rx="14" fill="#091E42" stroke="#2563EB" stroke-width="2.5" opacity="0.95"/>
+  <!-- AKS Badge -->
+  <g transform="translate(745, 105)">
+    <rect width="130" height="26" rx="6" fill="#326CE5"/>
+    <!-- K8s Wheel Icon -->
+    <circle cx="16" cy="13" r="6" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+    <path d="M 16 7 L 16 19 M 10 10 L 22 16 M 10 16 L 22 10" stroke="#FFFFFF" stroke-width="1.2"/>
+    <text x="32" y="17" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">AKS CLUSTER</text>
+  </g>
+
+  <!-- NGINX INGRESS -->
+  <g transform="translate(850, 140)">
+    <rect x="-35" y="-5" width="70" height="70" rx="14" fill="#009639" opacity="0.15"/>
+    <polygon points="0,-20 22,-8 22,18 0,30 -22,18 -22,-8" fill="#009639" stroke="#10B981" stroke-width="2"/>
+    <text x="0" y="12" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">N</text>
+    <text x="0" y="48" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Nginx Ingress</text>
+  </g>
+
+  <!-- ARGOCD -->
+  <g transform="translate(800, 275)">
+    <circle cx="0" cy="0" r="28" fill="#1E293B" stroke="#F97316" stroke-width="2.5"/>
+    <!-- Octopus Face -->
+    <circle cx="-7" cy="-3" r="3.5" fill="#38BDF8"/>
+    <circle cx="7" cy="-3" r="3.5" fill="#38BDF8"/>
+    <path d="M -12 8 Q 0 16 12 8" fill="none" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="0" y="44" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" font-weight="600">ArgoCD</text>
+  </g>
+
+  <!-- PORTFOLIO APP PODS -->
+  <g transform="translate(1030, 240)">
+    <rect x="-50" y="-35" width="100" height="70" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+    <!-- 3D Cube Icon -->
+    <g transform="translate(0, -5) scale(0.9)">
+      <polygon points="0,-18 16,-9 16,9 0,18 -16,9 -16,-9" fill="#2563EB" opacity="0.4"/>
+      <polygon points="0,-18 16,-9 0,0 -16,-9" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1.2"/>
+      <polygon points="0,0 16,-9 16,9 0,18" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.2"/>
+      <polygon points="-16,-9 0,0 0,18 -16,9" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1.2"/>
+    </g>
+    <text x="0" y="24" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Portfolio App</text>
+    <rect x="-35" y="42" width="70" height="18" rx="9" fill="#10B981" opacity="0.2"/>
+    <text x="0" y="54" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">2 Replicas</text>
+  </g>
+
+  <!-- ==================== GITHUB BOX ==================== -->
+  <rect x="140" y="160" width="160" height="230" rx="14" fill="#0D1322" stroke="#D97706" stroke-width="2"/>
+  <g transform="translate(155, 175)">
+    <!-- GitHub Octocat Icon -->
+    <path d="M 12 0 C 5.37 0 0 5.37 0 12 C 0 17.3 3.44 21.8 8.2 23.4 C 8.8 23.5 9 23.1 9 22.8 L 9 20.7 C 5.67 21.4 4.97 19.1 4.97 19.1 C 4.42 17.7 3.63 17.3 3.63 17.3 C 2.55 16.6 3.71 16.6 3.71 16.6 C 4.9 16.7 5.53 17.8 5.53 17.8 C 6.6 19.6 8.3 19.1 8.97 18.8 C 9.07 18 9.39 17.5 9.74 17.2 C 7.08 16.9 4.28 15.9 4.28 11.3 C 4.28 10 4.74 8.9 5.5 8.1 C 5.38 7.8 4.97 6.6 5.61 5 C 5.61 5 6.6 4.7 8.85 6.2 C 9.8 5.9 10.8 5.8 11.8 5.8 C 12.8 5.8 13.8 5.9 14.75 6.2 C 17 4.7 18 5 18 5 C 18.64 6.6 18.23 7.8 18.11 8.1 C 18.87 8.9 19.33 10 19.33 11.3 C 19.33 15.9 16.53 16.9 13.86 17.2 C 14.3 17.6 14.7 18.3 14.7 19.5 L 14.7 22.8 C 14.7 23.1 14.9 23.5 15.5 23.4 C 20.27 21.8 23.7 17.3 23.7 12 C 23.7 5.37 18.33 0 11.7 0 Z" fill="#FFFFFF" transform="scale(0.8)"/>
+    <text x="26" y="15" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" letter-spacing="1">GITHUB</text>
+  </g>
+
+  <!-- Repo 1: portfolio_infra -->
+  <g transform="translate(160, 230)">
+    <!-- Branch Icon -->
+    <circle cx="10" cy="5" r="4" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="10" cy="25" r="4" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="25" cy="15" r="4" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <path d="M 10 9 L 10 21 M 10 21 Q 10 15 21 15" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="36" y="19" fill="#E2E8F0" font-family="monospace" font-size="12" font-weight="bold">portfolio_infra</text>
+    <text x="36" y="32" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">(GitOps Manifests)</text>
+  </g>
+
+  <!-- Repo 2: portfolio_depl -->
+  <g transform="translate(160, 310)">
+    <!-- Branch Icon -->
+    <circle cx="10" cy="5" r="4" fill="none" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="10" cy="25" r="4" fill="none" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="25" cy="15" r="4" fill="none" stroke="#38BDF8" stroke-width="2"/>
+    <path d="M 10 9 L 10 21 M 10 21 Q 10 15 21 15" fill="none" stroke="#38BDF8" stroke-width="2"/>
+    <text x="36" y="19" fill="#E2E8F0" font-family="monospace" font-size="12" font-weight="bold">portfolio_depl</text>
+    <text x="36" y="32" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">(App Source Code)</text>
+  </g>
+
+  <!-- ==================== DEVELOPER ==================== -->
+  <g transform="translate(50, 320)">
+    <circle cx="0" cy="-12" r="10" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+    <path d="M -16 12 C -16 0 16 0 16 12" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="0" y="30" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Developer</text>
+  </g>
+
+  <!-- ==================== USERS ==================== -->
+  <g transform="translate(230, 80)">
+    <circle cx="0" cy="-12" r="10" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+    <path d="M -16 12 C -16 0 16 0 16 12" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="0" y="30" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Users</text>
+  </g>
+
+  <!-- ==================== JENKINS VM ==================== -->
+  <g transform="translate(460, 320)">
+    <rect x="-45" y="-35" width="90" height="70" rx="12" fill="#1E293B" stroke="#E2E8F0" stroke-width="1.8"/>
+    <!-- Jenkins Butler Hat / Silhouette -->
+    <path d="M -12 -12 Q 0 -22 12 -12 L 15 -7 L -15 -7 Z" fill="#D24939"/>
+    <rect x="-18" y="-7" width="36" height="3" fill="#333333"/>
+    <circle cx="0" cy="5" r="12" fill="#FDE68A"/>
+    <!-- Bowtie -->
+    <polygon points="-8,18 0,15 8,18 0,21" fill="#D24939"/>
+    <text x="0" y="32" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Jenkins VM</text>
+  </g>
+
+  <!-- ==================== ACR (Azure Container Registry) ==================== -->
+  <g transform="translate(600, 320)">
+    <!-- Cloud base -->
+    <path d="M -25 10 A 12 12 0 0 1 -10 -6 A 16 16 0 0 1 15 -6 A 12 12 0 0 1 25 10 Z" fill="#0078D4" opacity="0.3"/>
+    <!-- Container crates -->
+    <rect x="-16" y="-8" width="14" height="20" rx="2" fill="#0078D4" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="2" y="-8" width="14" height="20" rx="2" fill="#005A9E" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="0" y="28" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">ACR</text>
+  </g>
+
+  <!-- ==================== ARROWS & FLOWS ==================== -->
+  <!-- 1. Dev push code -> portfolio_depl -->
+  <path d="M 68 320 L 138 320" stroke="#CBD5E1" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="75" y="306" width="58" height="15" fill="#0B0F19" rx="3"/>
+  <text x="104" y="317" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" font-weight="600">push code</text>
+
+  <!-- 2. Webhook trigger -> Jenkins VM -->
+  <path d="M 300 320 L 413 320" stroke="#CBD5E1" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="315" y="306" width="85" height="15" fill="#0D1322" rx="3"/>
+  <text x="357" y="317" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">webhook trigger</text>
+
+  <!-- 3. Jenkins -> ACR push image -->
+  <path d="M 505 320 L 568 320" stroke="#CBD5E1" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="510" y="306" width="58" height="15" fill="#0D1322" rx="3"/>
+  <text x="539" y="317" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">push image</text>
+
+  <!-- 4. Jenkins update manifest -> portfolio_infra (Top loop) -->
+  <path d="M 460 285 L 460 20 L 210 20 L 210 158" fill="none" stroke="#CBD5E1" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="300" y="12" width="90" height="16" fill="#080B11" rx="4"/>
+  <text x="345" y="24" text-anchor="middle" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="10" font-weight="600">update manifest</text>
+
+  <!-- 5. ArgoCD watch for changes -> portfolio_infra (Dashed Line) -->
+  <path d="M 770 275 L 302 275" fill="none" stroke="#CBD5E1" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <rect x="490" y="266" width="115" height="18" fill="#0D1322" rx="4"/>
+  <text x="547" y="279" text-anchor="middle" fill="#F97316" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">watch for changes</text>
+
+  <!-- 6. ArgoCD pull image from ACR -->
+  <path d="M 632 320 L 710 320 Q 750 320 770 295" fill="none" stroke="#CBD5E1" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="660" y="311" width="55" height="16" fill="#0D1322" rx="3"/>
+  <text x="687" y="323" text-anchor="middle" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="9" font-weight="600">pull image</text>
+
+  <!-- 7. ArgoCD deploy -> Portfolio App -->
+  <path d="M 830 275 L 978 260" fill="none" stroke="#CBD5E1" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="880" y="258" width="45" height="15" fill="#091E42" rx="3"/>
+  <text x="902" y="269" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="9" font-weight="bold">deploy</text>
+
+  <!-- 8. Nginx Ingress -> Portfolio App -->
+  <path d="M 885 160 Q 980 160 1010 203" fill="none" stroke="#CBD5E1" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- 9. Users HTTPS -> Nginx Ingress -->
+  <path d="M 248 80 Q 450 80 500 130 T 813 155" fill="none" stroke="#CBD5E1" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <rect x="330" y="72" width="55" height="16" fill="#080B11" rx="4"/>
+  <text x="357" y="84" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">HTTPS</text>
+</svg>
