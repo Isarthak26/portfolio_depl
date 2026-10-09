@@ -575,174 +575,54 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-[80px] md:pt-24 pb-8 md:pb-12 px-5 md:px-6 max-w-7xl mx-auto min-h-0 md:min-h-[calc(100vh-4.5rem)] flex flex-col justify-center">
-        {/* ========================================================= */}
-        {/* MOBILE HERO (under 768px: left-aligned product layout)     */}
-        {/* ========================================================= */}
-        <div className="md:hidden flex flex-col text-left w-full">
-          {/* 1. Identity row: 64px avatar + name & role */}
-          <motion.div
-            initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05, ease: EASING_EASE_OUT_EXPO }}
-            className="flex items-center gap-3.5 mb-3.5"
-          >
-            <div className="w-16 h-16 shrink-0 rounded-2xl overflow-hidden border-2 border-white shadow-md shadow-[#6366F1]/15 bg-gray-100">
-              <img
-                src="/assets/images/photo.png"
-                alt="Sarthak Bordia"
-                className="w-full h-full object-cover object-[center_top]"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-            <div>
-              <h2 className="text-[18px] font-bold text-gray-900 leading-tight">
-                Sarthak Bordia
-              </h2>
-              <p className="text-[14px] text-[#6366F1] font-semibold mt-0.5">
-                CS Undergrad · DevOps
-              </p>
-            </div>
-          </motion.div>
-
-          {/* 2. Availability pill below it */}
-          <motion.div
-            initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.13, ease: EASING_EASE_OUT_EXPO }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-[12px] sm:text-[13px] font-semibold mb-3.5 max-w-full shadow-2xs self-start"
-          >
-            <span className="relative flex h-2 w-2 shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span className="whitespace-nowrap truncate">Open to internships · India &amp; Remote</span>
-          </motion.div>
-
-          {/* 3. Headline, left-aligned */}
-          <motion.h1
-            initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.21, ease: EASING_EASE_OUT_EXPO }}
-            className="text-[clamp(2rem,9vw,2.5rem)] font-extrabold tracking-tight leading-[1.1] text-gray-900 mb-3 [text-wrap:balance]"
-          >
-            I build &amp; automate{' '}
-            <span className="bg-gradient-to-r from-[#6366F1] via-[#818CF8] to-[#4F46E5] bg-clip-text text-transparent">
-              cloud infrastructure
-            </span>
-          </motion.h1>
-
-          {/* 4. Bio, left-aligned, max 2 to 3 lines on mobile */}
-          <motion.p
-            initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.29, ease: EASING_EASE_OUT_EXPO }}
-            className="text-base leading-[1.6] mb-5 font-normal [text-wrap:pretty]"
-            style={{ color: '#374151' }}
-          >
-            Docker, Kubernetes, Azure and Terraform. I ship GitOps pipelines and observable microservices.
-          </motion.p>
-
-          {/* 5. CTAs: two full-width stacked buttons (52px tall) */}
-          <motion.div
-            initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.37, ease: EASING_EASE_OUT_EXPO }}
-            className="flex flex-col gap-2.5 w-full mb-3.5"
-          >
-            <button
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full h-[52px] bg-[#6366F1] hover:bg-[#4F46E5] text-white rounded-full font-semibold text-[15px] flex items-center justify-center gap-2 shadow-lg shadow-[#6366F1]/25 active:scale-[0.98] transition-all cursor-pointer min-h-[52px]"
+      <section id="home" className="pt-[76px] md:pt-24 pb-8 md:pb-12 px-5 md:px-6 max-w-7xl mx-auto min-h-0 md:min-h-[calc(100vh-4.5rem)] flex flex-col justify-center overflow-x-clip w-full box-border">
+        <div className="grid grid-cols-[minmax(0,1fr)] md:grid-cols-2 gap-8 lg:gap-12 items-center w-full min-w-0">
+          {/* Photo on Right (Desktop) / Centered at Top (Mobile) */}
+          <div className="order-1 md:order-2 flex justify-center mt-2 md:mt-0 w-full min-w-0">
+            <motion.div
+              style={shouldReduceMotion ? {} : { x: photoParallaxX, y: photoParallaxY }}
+              className="relative w-[clamp(220px,64vw,260px)] md:max-w-[380px] md:w-full aspect-square flex items-center justify-center mx-auto min-w-0"
             >
-              Explore My Work <ArrowRight size={18} />
-            </button>
+              <div className="absolute inset-0 md:-inset-6 bg-[#6366F1]/20 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] blur-md md:blur-2xl -z-10 animate-pulse pointer-events-none" />
 
-            <a
-              href={RESUME_URL}
-              download="Sarthak_Bordia_Resume.pdf"
-              className="w-full h-[52px] bg-white text-gray-800 border-2 border-gray-200 hover:border-[#6366F1] hover:text-[#6366F1] rounded-full font-semibold text-[15px] flex items-center justify-center gap-2 shadow-2xs active:scale-[0.98] transition-all cursor-pointer min-h-[52px]"
-            >
-              <Download size={18} /> Download Resume
-            </a>
-          </motion.div>
+              <motion.div 
+                animate={shouldReduceMotion ? {} : { y: [-6, 6, -6] }}
+                transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.03, rotate: -1 }}
+                className="w-full h-full aspect-square relative z-10 cursor-pointer"
+              >
+                <div className="absolute inset-0 bg-[#6366F1]/10 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] animate-morph" />
+                <img 
+                  src="/assets/images/photo.png" 
+                  alt="Sarthak Bordia" 
+                  className="w-full h-full object-cover object-[center_top] rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] shadow-xl md:shadow-2xl relative z-10 border-4 sm:border-6 md:border-8 border-white/80 md:border-white/60 backdrop-blur-sm"
+                  referrerPolicy="no-referrer"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
 
-          {/* 6. Social row under buttons (LinkedIn & GitHub 44px, no Instagram) */}
-          <motion.div
-            initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.45, ease: EASING_EASE_OUT_EXPO }}
-            className="flex items-center gap-2.5 mb-4"
-          >
-            <a
-              href="https://www.linkedin.com/in/sarthak-bordia-3b9b891a0/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-white border border-[#6366F1]/30 hover:border-[#6366F1] text-[#6366F1] hover:bg-[#6366F1] hover:text-white transition-all shadow-xs flex items-center justify-center cursor-pointer min-h-[44px] min-w-[44px]"
-              title="LinkedIn Profile"
-              aria-label="LinkedIn profile"
-            >
-              <Linkedin size={18} />
-            </a>
-            <a
-              href="https://github.com/Isarthak26"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-white border border-[#6366F1]/30 hover:border-[#6366F1] text-[#6366F1] hover:bg-[#6366F1] hover:text-white transition-all shadow-xs flex items-center justify-center cursor-pointer min-h-[44px] min-w-[44px]"
-              title="GitHub Profile"
-              aria-label="GitHub profile"
-            >
-              <Github size={18} />
-            </a>
-          </motion.div>
-
-          {/* 7. Horizontally scrollable row of tech chips */}
-          <motion.div
-            initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.53, ease: EASING_EASE_OUT_EXPO }}
-            className="relative w-full max-w-full overflow-hidden"
-          >
-            <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#e3eeff]/95 to-transparent z-10" />
-            <div className="flex items-center gap-1.5 overflow-x-auto snap-x snap-proximity py-1 pr-8 scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none]">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-gray-500 mr-1 shrink-0">
-                Stack:
-              </span>
-              {['Docker', 'Kubernetes', 'Azure', 'Terraform', 'Prometheus', 'ArgoCD', 'Jenkins', 'Python'].map((tech) => (
-                <span
-                  key={tech}
-                  className="snap-start shrink-0 px-2.5 py-1 rounded-full bg-white/85 text-gray-700 border border-gray-200 text-xs font-medium shadow-2xs whitespace-nowrap"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
-        {/* ========================================================= */}
-        {/* DESKTOP HERO (768px and up: unchanged original layout)     */}
-        {/* ========================================================= */}
-        <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Hero Content on Desktop */}
-          <div className="text-left">
+          {/* Hero Content */}
+          <div className="order-2 md:order-1 text-center md:text-left flex flex-col items-center md:items-start w-full min-w-0">
             <motion.div
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.08, ease: EASING_EASE_OUT_EXPO }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-semibold mb-3 shadow-xs"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-[13px] md:text-xs font-semibold mt-4 md:mt-0 mb-3 shadow-xs max-w-full"
             >
-              <span className="relative flex h-2 w-2">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span>Open to DevOps / SRE / Backend internships · India &amp; Remote</span>
+              <span className="md:hidden">Open to internships · India &amp; Remote</span>
+              <span className="hidden md:inline">Open to DevOps / SRE / Backend internships · India &amp; Remote</span>
             </motion.div>
 
             <motion.p
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.16, ease: EASING_EASE_OUT_EXPO }}
-              className="text-[#6366F1] font-bold tracking-wider uppercase text-sm mb-3 block"
+              className="text-[#6366F1] font-bold tracking-wider uppercase text-xs sm:text-sm mb-3 block text-center md:text-left"
             >
               SARTHAK BORDIA · CS UNDERGRAD · DEVOPS
             </motion.p>
@@ -751,9 +631,9 @@ export default function App() {
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.24, ease: EASING_EASE_OUT_EXPO }}
-              className="text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-4 text-gray-900"
+              className="text-[clamp(1.9rem,8.5vw,2.4rem)] md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] md:leading-[1.12] mb-3.5 md:mb-4 text-gray-900 [text-wrap:balance] text-center md:text-left"
             >
-              I build &amp; automate <br />
+              I build &amp; automate <br className="hidden sm:inline" />
               <span className="bg-gradient-to-r from-[#6366F1] via-[#818CF8] to-[#4F46E5] bg-clip-text text-transparent">
                 cloud infrastructure
               </span>
@@ -763,7 +643,7 @@ export default function App() {
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.33, ease: EASING_EASE_OUT_EXPO }}
-              className="text-lg mb-6 max-w-xl leading-relaxed font-normal [text-wrap:balance]"
+              className="text-base md:text-lg mb-5 md:mb-6 w-full max-w-xl leading-[1.6] md:leading-relaxed font-normal [text-wrap:balance] [overflow-wrap:anywhere] text-center md:text-left"
               style={{ color: '#374151' }}
             >
               Specializing in automated cloud delivery and container orchestration using Docker, Kubernetes (AKS), Azure, Terraform, and Prometheus. Recently deployed production-grade GitOps microservices on Azure with automated CI/CD pipelines and real-time observability.
@@ -773,13 +653,13 @@ export default function App() {
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.42, ease: EASING_EASE_OUT_EXPO }}
-              className="flex flex-wrap items-center gap-3 mb-6"
+              className="flex flex-col md:flex-row items-center gap-3 mb-5 md:mb-6 w-full md:w-auto"
             >
               <motion.button 
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-[#6366F1] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#4F46E5] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#6366F1]/25 active:scale-95 cursor-pointer min-h-[44px]"
+                className="w-full md:w-auto bg-[#6366F1] text-white px-5 sm:px-6 py-3 rounded-full font-semibold hover:bg-[#4F46E5] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#6366F1]/25 active:scale-95 cursor-pointer min-h-[44px]"
               >
                 Explore My Work <ArrowRight size={17} />
               </motion.button>
@@ -789,12 +669,12 @@ export default function App() {
                 download="Sarthak_Bordia_Resume.pdf"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-white text-gray-800 border-2 border-gray-200 hover:border-[#6366F1] hover:text-[#6366F1] px-5 py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer min-h-[44px]"
+                className="w-full md:w-auto bg-white text-gray-800 border-2 border-gray-200 hover:border-[#6366F1] hover:text-[#6366F1] px-4 sm:px-5 py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer min-h-[44px]"
               >
                 <Download size={17} /> Download Resume
               </motion.a>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center gap-3 w-full md:w-auto pt-1 md:pt-0">
                 <motion.a 
                   href="https://www.linkedin.com/in/sarthak-bordia-3b9b891a0/"
                   target="_blank"
@@ -826,7 +706,7 @@ export default function App() {
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.51, ease: EASING_EASE_OUT_EXPO }}
-              className="flex flex-wrap items-center gap-2"
+              className="flex flex-wrap items-center justify-center md:justify-start gap-2 w-full max-w-full"
             >
               <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mr-1">
                 Core Stack:
@@ -834,52 +714,11 @@ export default function App() {
               {['Docker', 'Kubernetes', 'Azure', 'Terraform', 'Prometheus', 'Python'].map((tech) => (
                 <span
                   key={tech}
-                  className="px-2.5 py-1 rounded-full bg-white/80 hover:bg-white text-gray-700 hover:text-[#6366F1] border border-gray-200/80 text-xs font-medium transition-colors shadow-2xs"
+                  className="px-2.5 py-1 rounded-full bg-white/80 hover:bg-white text-gray-700 hover:text-[#6366F1] border border-gray-200/80 text-xs font-medium transition-colors shadow-2xs whitespace-normal"
                 >
                   {tech}
                 </span>
               ))}
-            </motion.div>
-          </div>
-
-          {/* Desktop Photo on Right with slow float and mouse parallax */}
-          <div className="flex justify-center">
-            <motion.div
-              style={shouldReduceMotion ? {} : { x: photoParallaxX, y: photoParallaxY }}
-              className="relative max-w-[380px] w-full"
-            >
-              <div className="absolute -inset-6 bg-[#6366F1]/20 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] blur-2xl -z-10 animate-pulse" />
-
-              <motion.div 
-                animate={shouldReduceMotion ? {} : { y: [-6, 6, -6] }}
-                transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
-                whileHover={{ scale: 1.03, rotate: -1 }}
-                className="w-full aspect-square relative z-10 cursor-pointer"
-              >
-                <div className="absolute inset-0 bg-[#6366F1]/10 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] animate-morph" />
-                <img 
-                  src="/assets/images/photo.png" 
-                  alt="Sarthak Bordia" 
-                  className="w-full h-full object-cover object-[center_top] rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] shadow-2xl relative z-10 border-8 border-white/60 backdrop-blur-sm"
-                  referrerPolicy="no-referrer"
-                />
-              </motion.div>
-
-              <motion.a
-                href="https://www.instagram.com/sarthak.bordia/"
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: -10, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ delay: 0.4, type: 'spring' }}
-                whileHover={{ scale: 1.14, rotate: 8, y: -3 }}
-                whileTap={{ scale: 0.92 }}
-                className="absolute -top-3 right-6 z-20 w-14 h-14 rounded-full bg-white/95 hover:bg-white backdrop-blur-md border-2 border-white ring-2 ring-gray-200/70 hover:ring-pink-300 shadow-xl shadow-gray-900/15 flex items-center justify-center text-[#E1306C] hover:text-[#D62976] group transition-all cursor-pointer min-h-[44px] min-w-[44px]"
-                title="Follow Sarthak on Instagram (@sarthak.bordia)"
-                aria-label="Instagram profile"
-              >
-                <Instagram size={24} className="transition-transform group-hover:scale-110" />
-              </motion.a>
             </motion.div>
           </div>
         </div>
@@ -913,7 +752,7 @@ export default function App() {
             >
               <div className="aspect-[4/5] md:aspect-square w-full max-w-full rounded-3xl overflow-hidden shadow-xl relative border border-gray-100/90 bg-gray-100">
                 <img 
-                  src="/assets/images/sec.jpeg" 
+                  src="/assets/images/2.jpeg" 
                   alt="Sarthak Bordia" 
                   className="w-full h-full object-cover object-[center_20%]"
                   referrerPolicy="no-referrer"
